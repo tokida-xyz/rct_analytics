@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Download, Eye, Filter, ArrowLeft, BarChart3, FileText, Image } from 'lucide-react'
+import { Download, Filter, ArrowLeft, FileText } from 'lucide-react'
 import toast from 'react-hot-toast'
 import { getAnalysisResult, downloadCsv, downloadLogs, downloadFigure, getFigureList } from '../services/api'
 import { AnalysisResult, InteractionResult } from '../types'
@@ -13,7 +13,6 @@ const ResultsPage: React.FC = () => {
     moderator: '',
     outcome: ''
   })
-  const [selectedModerator, setSelectedModerator] = useState<string>('')
   const [figures, setFigures] = useState<string[]>([])
   const navigate = useNavigate()
 

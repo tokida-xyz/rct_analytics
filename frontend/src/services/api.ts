@@ -3,8 +3,7 @@ import {
   UploadResponse, 
   AnalysisRequest, 
   JobStatus, 
-  AnalysisResult,
-  AnalysisSettings 
+  AnalysisResult
 } from '../types'
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://your-backend-url.herokuapp.com'

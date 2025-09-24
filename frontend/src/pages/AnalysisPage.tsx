@@ -23,7 +23,7 @@ const AnalysisPage: React.FC = () => {
   }, [navigate])
 
   useEffect(() => {
-    let interval: NodeJS.Timeout | null = null
+    let interval: number | null = null
 
     if (isRunning && jobStatus?.job_id) {
       interval = setInterval(async () => {

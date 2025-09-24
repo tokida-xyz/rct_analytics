@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDropzone } from 'react-dropzone'
-import { Upload, FileText, AlertCircle, CheckCircle } from 'lucide-react'
+import { Upload, CheckCircle } from 'lucide-react'
 import toast from 'react-hot-toast'
 import { uploadFile } from '../services/api'
 import { UploadResponse } from '../types'
