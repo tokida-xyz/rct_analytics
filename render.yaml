@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: interaction-analysis-backend
+    env: python
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "cd backend && python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHONPATH
+        value: /opt/render/project/src/backend
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0
+      - key: DEBUG
+        value: false
+      - key: ALLOWED_HOSTS
+        value: https://*.render.com,https://*.vercel.app
+      - key: MAX_FILE_SIZE
+        value: "52428800"
+      - key: UPLOAD_DIR
+        value: /tmp/uploads
+      - key: RESULTS_DIR
+        value: /tmp/results

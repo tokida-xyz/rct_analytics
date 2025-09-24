@@ -6,7 +6,7 @@ import {
   AnalysisResult
 } from '../types'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://your-backend-url.herokuapp.com'
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://your-backend-url.onrender.com'
 
 const api = axios.create({
   baseURL: API_BASE_URL,
