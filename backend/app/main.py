@@ -7,6 +7,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import os
+from datetime import datetime
 
 from app.api import upload, analysis, results
 from app.core.config import settings
@@ -55,7 +56,7 @@ async def root():
 @app.get("/health")
 async def health_check():
     """ヘルスチェック"""
-    return {"status": "healthy"}
+    return {"status": "healthy", "timestamp": datetime.now().isoformat()}
 
 if __name__ == "__main__":
     import uvicorn

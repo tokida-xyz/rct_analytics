@@ -25,7 +25,8 @@ class Settings(BaseSettings):
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "https://rct-analytics.vercel.app",
-        "https://*.vercel.app"
+        "https://*.vercel.app",
+        "https://*.railway.app"
     ]
     
     # ファイルアップロード設定
